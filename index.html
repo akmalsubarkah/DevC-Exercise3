@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exercise 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        th {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <h1>Daftar Planet</h1>
-    </center>
+        <center>
+            <h1>Daftar Planet</h1>
+        </center>
+        <div class="container">
+            <div class="form-group">
+                <select class="form-control form-control-lg" id="filter">
+                    <option value="0" selected>All</option>
+                    <option value="1">Rotation period > 23</option>
+                    <option value="2">Rotation Periode <= 23 </option>
+                    <option value="3">Orbital Periode > 500 </option>
+                    <option value="4">Orbital Periode <= 500 </option>
+                    <option value="5">Diameter > 10.000 </option>
+                    <option value="6">Diameter <= 10.000 </option>
+                </select>
+            </div>
+            <table class="table table-bordered table-striped table-hover" id="userdata">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Name</th>
+                        <th>Rotation Period</th>
+                        <th>Orbital Period</th>
+                        <th>Diameter</th>
+                        <th>Climate</th>
+                        <th>Gravity</th>
+                        <th>Terrain</th>
+                        <th>Surface Water</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+    
+                </tbody>
+            </table>
+        </div>
+        <script src="jscript.js"></script>
 </body>
 </html>
